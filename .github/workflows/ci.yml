@@ -16,6 +16,7 @@ jobs:
         run: pylint -r y wisp_api/ 
   Test:
     runs-on: ubuntu-latest
+    needs: [Lint]
     steps:
       - uses: actions/checkout@v2
       - name: Install Python 3
