@@ -55,13 +55,15 @@ def special_math_memoize(value, memoize = None):
 
 def special_math_iterative(value):
     '''
-    Iterative special math solver
+    Iterative special math solver.
+    f(n) = n + f(n-1) + f(n-2) = fibonacci(n+4) - (3+n)
+    credit/source of formula at https://oeis.org/A001924
 
     Parameters:
         value(int): Input value to evaluate
 
     Returns:
-        result(int): Result of special math f(n) = n + f(n-1) + f(n-2)
+        result(int): Result of special math fibonacci(n+4) - (3+n)
     '''
     if value < 0:
         raise ValueError
