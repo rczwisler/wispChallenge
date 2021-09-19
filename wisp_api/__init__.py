@@ -24,3 +24,5 @@ def create_app():
     api.register_blueprint(special_math.bp)
 
     return api
+
+application = create_app()
