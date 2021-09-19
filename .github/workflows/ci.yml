@@ -1,0 +1,28 @@
+name: CI
+on: push
+  
+jobs:
+  Lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Python 3
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Lint
+        run: pylint -r y wisp_api/ 
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Python 3
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Test
+        run: pytest -v -durations=0 
