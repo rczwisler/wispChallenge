@@ -28,7 +28,7 @@ def special_math_get(value):
         result = special_math_iterative(int(value))
         return str(result)
     except (ValueError, TypeError):
-        return "Invalid input value. Must be a positive whole integer"
+        return "Invalid input value. Must be a positive whole integer", 400
 
 def special_math_memoize(value, memoize = None):
     '''
