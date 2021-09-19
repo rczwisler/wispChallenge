@@ -7,3 +7,7 @@ Repo for coding challenge for Wisp
 
 ## deploy API
 `flask run`
+
+## endpoints
+* `/`  - landing page displays simple Hello World message
+* `/specialMath/<value>` - performs specialMath
